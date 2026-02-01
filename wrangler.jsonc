@@ -58,8 +58,8 @@
   // R2 bucket for persistent storage (moltbot data, conversations, etc.)
   "r2_buckets": [
     {
-      "binding": "MOLTBOT_BUCKET",
-      "bucket_name": "moltbot-data",
+      "binding": "OBLOT_BUCKET",
+      "bucket_name": "oblot-data",
     },
   ],
   // Cron trigger to sync moltbot data to R2 every 5 minutes

@@ -5,29 +5,6 @@
   },
   "models": {
     "providers": {
-      "nvidia": {
-        "baseUrl": "https://integrate.api.nvidia.com/v1/chat",
-        "apiKey": "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",
-        "api": "completions",
-        "models": [
-          {
-            "id": "moonshotai/kimi-k2.5",
-            "name": "Kimi k2.5",
-            "contextWindow": 200000,
-            "reasoning": false,
-            "input": [
-              "text"
-            ],
-            "cost": {
-              "input": 0,
-              "output": 0,
-              "cacheRead": 0,
-              "cacheWrite": 0
-            },
-            "maxTokens": 16384
-          }
-        ]
-      },
       "anthropic": {
         "baseUrl": "https://gateway.ai.cloudflare.com/v1/b10530ca120012695a9631611c9458b5/openrouter/compat",
         "apiKey": "-8zIJ34itltJk_tHt-IZVyatGvr13B4Ap3hEi224",
@@ -38,9 +15,7 @@
             "name": "Claude Opus 4.5",
             "contextWindow": 200000,
             "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -54,9 +29,7 @@
             "name": "Claude Sonnet 4.5",
             "contextWindow": 200000,
             "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -70,9 +43,7 @@
             "name": "Claude Haiku 4.5",
             "contextWindow": 200000,
             "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -88,7 +59,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "nvidia/moonshotai/kimi-k2.5"
+        "primary": "openrouter/openai/gpt-oss-120b:free"
       },
       "models": {
         "openrouter/openai/gpt-oss-120b:free": {
@@ -102,9 +73,6 @@
         },
         "anthropic/claude-haiku-4-5-20251001": {
           "alias": "Haiku 4.5"
-        },
-        "nvidia/moonshotai/kimi-k2.5": {
-          "alias": "Kimi k2.5"
         }
       },
       "workspace": "/root/clawd",
@@ -117,9 +85,7 @@
   "tools": {
     "elevated": {
       "allowFrom": {
-        "webchat": [
-          "*"
-        ]
+        "webchat": ["*"]
       }
     }
   },
@@ -140,9 +106,7 @@
         "*": {
           "requireMention": true,
           "tools": {
-            "allow": [
-              "*"
-            ]
+            "allow": ["*"]
           }
         }
       },
@@ -153,12 +117,8 @@
         "reactions": true,
         "sendMessage": true
       },
-      "allowFrom": [
-        "*"
-      ],
-      "groupAllowFrom": [
-        "*"
-      ],
+      "allowFrom": ["*"],
+      "groupAllowFrom": ["*"],
       "heartbeat": {
         "showAlerts": true,
         "showOk": true,
@@ -172,9 +132,7 @@
     "auth": {
       "token": "MSMhdi3D05qu2Py3VcpYyGpLIDSPFHLu"
     },
-    "trustedProxies": [
-      "10.1.0.0"
-    ]
+    "trustedProxies": ["10.1.0.0"]
   },
   "plugins": {
     "entries": {
