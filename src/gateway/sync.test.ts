@@ -108,7 +108,7 @@ describe('syncToR2', () => {
 
       await syncToR2(sandbox, env);
 
-      // Third call should be rsync (paths still use openclawinternally)
+      // Third call should be rsync (paths still use openclaw internally)
       const rsyncCall = startProcessMock.mock.calls[2][0];
       expect(rsyncCall).toContain('rsync');
       expect(rsyncCall).toContain('--no-times');
