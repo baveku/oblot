@@ -108,7 +108,7 @@ describe('syncToR2', () => {
 
       await syncToR2(sandbox, env);
 
-      // Third call should be rsync (paths still use clawdbot internally)
+      // Third call should be rsync (paths still use openclawinternally)
       const rsyncCall = startProcessMock.mock.calls[2][0];
       expect(rsyncCall).toContain('rsync');
       expect(rsyncCall).toContain('--no-times');

@@ -14,7 +14,7 @@ if pgrep -f "openclaw gateway" > /dev/null 2>&1; then
     exit 0
 fi
 
-# Paths (clawdbot paths are used internally - upstream hasn't renamed yet)
+# Paths (openclawpaths are used internally - upstream hasn't renamed yet)
 CONFIG_DIR="/root/.clawdbot"
 CONFIG_FILE="$CONFIG_DIR/clawdbot.json"
 TEMPLATE_DIR="/root/.clawdbot-templates"
@@ -271,7 +271,7 @@ console.log('Config:', JSON.stringify(config, null, 2));
 EOFNODE
 
 echo "Running config doctor to validate and fix configuration..."
-clawdbot doctor --fix || echo "Warning: doctor --fix failed, continuing anyway"
+openclawdoctor --fix || echo "Warning: doctor --fix failed, continuing anyway"
 
 # ============================================================
 # START GATEWAY
