@@ -271,7 +271,7 @@ console.log('Config:', JSON.stringify(config, null, 2));
 EOFNODE
 
 echo "Running config doctor to validate and fix configuration..."
-openclawdoctor --fix || echo "Warning: doctor --fix failed, continuing anyway"
+openclaw doctor --fix || echo "Warning: doctor --fix failed, continuing anyway"
 
 # ============================================================
 # START GATEWAY
